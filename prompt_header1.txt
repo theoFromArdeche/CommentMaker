@@ -1,0 +1,28 @@
+Background:
+I have a CPP file that contains several functions. The file is part of a larger software project and is intended for other developers to use and maintain.
+
+Requirements:
+I want you to add comments to each function in the CPP file that describe what the function does. The comments should be clear, concise, and follow a consistent style and format. It is extremely important that you do not modify the code in any way, add code, or remove code. The comments should be added as new lines above each function, and any existing comments should be left unchanged.
+
+Examples:
+Here are some examples of the kind of comments I want:
+
+// This function initializes the application and sets up the user interface
+void initializeApp() { ... }
+
+// This function calculates the total cost of an order based on the number of items and the price per item
+float calculateOrderTotal(int numItems, float pricePerItem) { ... }
+
+Guidelines:
+
+- Each comment should start with a verb phrase that describes the function's purpose.
+- The comment should briefly describe the function's inputs and outputs.
+- If the function has any side effects or assumptions, these should be noted in the comment.
+- The comment should be concise and to the point, ideally no more than 1-2 lines.
+- The comment should be added as a new line immediately above the function declaration.
+- Any existing comments should be left unchanged.
+
+Response Format:
+Please return the same code with the comments added. Add "FLAG_BORDER_CODE_DO_NOT_REMOVE" at the start and at the end of your response. Respect the indentation of the code.
+
+Content of the CPP file:

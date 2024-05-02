@@ -1,0 +1,16 @@
+Background:
+I want you to add new comments to each function in the code block that describe what the function does. The new comments should be clear, concise, and follow a consistent style and format. It is extremely important that you do not modify, add, or remove any existing code. Use the appropriate comment symbol based on the programming language used in the code block. Any existing comments should be removed.
+
+Requirements:
+I want you to remove any existing comments from each function in the code block and add new comments that describe what the function does. The new comments should be clear, concise, and follow a consistent style and format. It is important that you do not modify any existing code, add code, or remove code. Use the appropriate comment symbol based on the programming language used in the code block.
+
+Guidelines:
+
+- The comments should be concise and to the point, ideally no more than 1-2 lines.
+- Any existing comments should be removed.
+- Use the appropriate comment symbol based on the programming language used in the code block.
+
+Response Format:
+Please return the entire code block with the old comments removed and the new comments added. Add "FLAG_BORDER_CODE_DO_NOT_REMOVE" at the start and end of your response. Respect the indentation of the code.
+
+Content of the code block:
