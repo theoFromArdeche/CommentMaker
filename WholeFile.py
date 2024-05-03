@@ -62,22 +62,27 @@ def main():
     prompt_header_path = args.prompt_header_path
     results_path = args.result_path
 
-    if not os.path.exists(results_path):
+    if not os.path.isdir(results_path):
         os.makedirs(results_path)
         print(f'Created output directory at {results_path}')
 
-    if not os.path.exists(prompt_header_path):
+    if not os.path.isfile(prompt_header_path):
         print(f'Warning: Header file not found at {prompt_header_path}')
         return
 
     if not os.path.exists(input_path):
-        print(f'Warning: Input directory not found at {input_path}')
+        print(f'Warning: Input directory/file not found at {input_path}')
         return
 
     prompt_header = ""
     with open(prompt_header_path, 'r', encoding='utf-8') as f:
         prompt_header = f.read()
-    files = [f for f in os.listdir(input_path) if os.path.isfile(os.path.join(input_path, f))]
+    if os.path.isdir(input_path):
+        files = [f for f in os.listdir(input_path) if os.path.isfile(os.path.join(input_path, f))]
+    else:
+        file_name = os.path.basename(input_path)
+        input_path = os.path.dirname(input_path)
+        files = [file_name]
     ignore_files = [".md", ".txt"]
 
     for file in files:
